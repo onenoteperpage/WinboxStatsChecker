@@ -22,7 +22,6 @@ namespace WinboxStatsChecker
                 return;
             }
 
-
             string currentYearMonth = DateTime.Now.ToString("yyyyMM");
             string dbName = $"{currentYearMonth}.sqlite";
 

@@ -7,8 +7,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E0871990-8F90-406F-B466-4A44BAFCF084}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CBAStatsChecker</RootNamespace>
-    <AssemblyName>CBAStatsChecker</AssemblyName>
+    <RootNamespace>WinboxStatsChecker</RootNamespace>
+    <AssemblyName>WinboxStatsChecker</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -55,6 +55,9 @@
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>4288597_board_diagram_presentation_report_stats_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -89,6 +92,9 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="4288597_board_diagram_presentation_report_stats_icon.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -104,8 +110,8 @@
     <Delete Files="$(TargetPath).pdb;$(TargetPath).exe.config" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>del "CBAStatsChecker.pdb" "CBAStatsChecker.exe.config"
-"$(ProgramFiles)\7-Zip\7z.exe" a -r "$(TargetDir)CBAStatsChecker.zip" "$(TargetDir)*.*"
+    <PostBuildEvent>del "*.pdb" "*.exe.config"
+"$(ProgramFiles)\7-Zip\7z.exe" a -r "$(TargetDir)WinboxStatsChecker.zip" "$(TargetDir)*.*"
 </PostBuildEvent>
   </PropertyGroup>
 </Project>
