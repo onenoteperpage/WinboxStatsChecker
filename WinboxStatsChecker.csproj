@@ -110,8 +110,7 @@
     <Delete Files="$(TargetPath).pdb;$(TargetPath).exe.config" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>del "*.pdb" "*.exe.config"
-"$(ProgramFiles)\7-Zip\7z.exe" a -r "$(TargetDir)WinboxStatsChecker.zip" "$(TargetDir)*.*"
-</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>
